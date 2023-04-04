@@ -23,12 +23,20 @@ vector<int> prefix_func(string s) {
 int main(){
      string t, s;
      cin >> t >> s;
-     string s1 = t + s ;
-     string s2 = s + t;
-     vector<int> p = prefix_func(s1);
-     vector<int> p2 = prefix_func(s2);
-     int maxx = max(p[s1.size() - 1], p2[s2.size() - 1]);
-     cout << maxx;
+    //  string s1 = t + s ;
+    //  string s2 = s + t;
+     vector<int> p = prefix_func(s);
+     vector<int> p2 = prefix_func(t);
+     for(int i = 0; i< p.size(); i++){
+        cout << p[i] << endl;
+     }
+     cout << "ew" << endl;
+     for(int i = 0; i< p2.size(); i++){
+        cout << p2[i] << endl;
+     }
+     cout << "ew" << endl;
+     //int maxx = max(p[s1.size() - 1], p2[s2.size() - 1]);
+     //cout << maxx;
     
      return 0;
 }

@@ -5,8 +5,9 @@ using namespace std;
 struct node{
     int data;
     node * next;
-    node(){
-
+    node(int x){
+        data = x;
+        next = NULL;
     };
 };
 
@@ -20,7 +21,7 @@ struct  list
     }
 
     void insertLast(int x){
-        ListNode * t = new ListNode(x);
+        node * t = new node(x);
         if(tail == NULL){
             head = tail = t;
         }else{
@@ -30,7 +31,7 @@ struct  list
     }
 
     void insertFirst(int x){
-        ListNode * t = new ListNode(x);
+        node * t = new node(x);
         if(tail == NULL){
             head = tail = t;
         }else {
@@ -39,9 +40,7 @@ struct  list
         }
     }
     void add(int x){
-        node * temp = new node();
-        temp -> data = x;
-        temp -> next = NULL;
+        node * temp = new node(x);
         if(tail == NULL){
             tail = temp;
             head = temp;
@@ -52,9 +51,7 @@ struct  list
         }
     }
     void add1(int x){
-        node * temp = new node();
-        temp -> data = x;
-        temp -> next = NULL;
+        node * temp = new node(x);
         if(head == NULL){
             tail = temp;
             head = temp;
@@ -79,7 +76,6 @@ int main(){
     int n,k;
     cin >> n;
     int a[n];
-    int b[k];
     list l;
     for(int i=0;i<n;i++){
         cin >> a[i]; 
@@ -89,11 +85,12 @@ int main(){
     }
     l.print(l.head);
     cin >> k;
+    int b[k];
     for(int i=0; i<k; i++){
         cin >> b[i]; 
     } 
     for(int i = 0;i< k;i++){
-        l.add1(b[i]);
+        l.insertLast(b[i]);
     }
     l.print(l.head);
     return 0;

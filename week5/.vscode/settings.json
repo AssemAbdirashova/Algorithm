@@ -3,6 +3,11 @@
     "files.associations": {
         "xstring": "cpp",
         "queue": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "new": "cpp",
+        "iostream": "cpp",
+        "vector": "cpp",
+        "string": "cpp",
+        "random": "cpp"
     }
 }

@@ -54,7 +54,7 @@ void leaf(node *root){ // asc or desc
     }
 }
 
-/* void alone_leaf(node *root){ // leaf without child
+void alone_leaf(node *root){ // leaf without child
     if(root){
         alone_leaf(root->l);
         if(!root->l and !root->r)
@@ -114,19 +114,22 @@ bool sbalance(node * root){
         else return false;
     }
     
-} */
+} 
 
 
 int main(){
-   int n;
-   cin >> n;
+   int k;
+   cin >> k;
    node * tree = nullptr;
-   if(n != 0){
-       tree = new node(n);
+   if(k != 0){
+       tree = new node(k);
    }
-   while(n != 0){
+   while(k != 0){
+    int n;
+    cin >> n;
        add_tree(tree, n);
-       cin >> n;
+       
+       k--;
    }
   /*  if(sbalance(tree)) cout << "YES";
    else cout << "NO"; */

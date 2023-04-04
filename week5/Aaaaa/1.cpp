@@ -12,7 +12,6 @@ int main(){
         else{
             s[i] = s[i] + 32;
         }
-        
     }
     cout << s;
     return 0;
